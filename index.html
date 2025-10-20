@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phoenix Coder - Group 5 Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>🔥 Welcome to Our Group Portfolio 🔥</h1>
+    <p><strong>Group Name:</strong> Phoenix Coder | <strong>Group Number:</strong> 5</p>
+  </header>
+
+  <!-- Group Profile Section -->
+  <section class="group-profile">
+    <img src="D:\pinterest\Website Solutions That Perform – From Design to Launch.jfif" alt="Group Photo of Phoenix Coder" class="group-img">
+    <div class="group-description">
+      <h2>About Our Group</h2>
+      <p>We are <strong>Phoenix Coder – Group 5</strong>, a team of passionate students who rise to every challenge. We combine teamwork, creativity, and coding skills to turn ideas into digital projects that inspire and connect people.</p>
+      <p><strong>Group Opinion:</strong> We believe that learning is best achieved when shared. Our teamwork helps us improve both technically and personally, while enjoying every moment of collaboration.</p>
+    </div>
+  </section>
+
+  <h2 class="member-title">Meet Our Members</h2>
+  <section class="members">
+
+    <!-- Leader -->
+    <div class="member" onclick="toggleSolo('sorio')">
+      <img src="C:\Users\tpcmo\OneDrive\Pictures\2d836edf-6538-47b4-8667-c4c93ce6955f - Copy.jpg" alt="Kim Khenette M. Sorio" class="profile-img">
+      <h3>Sorio, Kim Khenette M. <span class="role">(Leader)</span></h3>
+      <div id="sorio" class="details">
+        <p><strong>Explanation:</strong> Kim leads the team with strong leadership and creativity, making sure everyone stays focused and productive.</p>
+        <p><strong>Details:</strong> She handles project planning and ensures all tasks are finished on time with proper design and structure.</p>
+        <p><strong>Output:</strong> Created the main layout and coordinated the coding workflow for the group project.</p>
+        <p><strong>My Opinion:</strong> Kim is a natural leader — confident, organized, and passionate. She motivates the team and brings out everyone’s best ideas.</p>
+      </div>
+    </div>
+
+    <!-- Member 1 -->
+    <div class="member" onclick="toggleSolo('juarez')">
+      <img src="C:\Users\tpcmo\OneDrive\Pictures\5fe78f48-107d-4889-beca-17e5e6d752e9.jfif" alt="Hezekiah Eran S. Juarez" class="profile-img">
+      <h3>Juarez, Hezekiah Eran S. <span class="role">(Member)</span></h3>
+      <div id="juarez" class="details">
+        <p><strong>Explanation:</strong> Hezekiah specializes in web design and contributes creative layout concepts for the team’s webpage.</p>
+        <p><strong>Details:</strong> He designed the visual interface and improved the style consistency across the webpage.</p>
+        <p><strong>Output:</strong> Developed color schemes, borders, and hover effects for member cards.</p>
+        <p><strong>My Opinion:</strong> Hezekiah has a strong artistic eye and a great sense of color balance. His designs make the website look lively and modern.</p>
+      </div>
+    </div>
+
+    <!-- Member 2 -->
+    <div class="member" onclick="toggleSolo('illana')">
+      <img src="C:\Users\tpcmo\OneDrive\Pictures\565057072_1396293318723924_2513306086426237671_n.jpg" alt="Reiden John J. Illana" class="profile-img">
+      <h3>Illana, Reiden John J. <span class="role">(Member)</span></h3>
+      <div id="illana" class="details">
+        <p><strong>Explanation:</strong> Reiden works mainly on coding and backend structure of the webpage.</p>
+        <p><strong>Details:</strong> He connects the HTML and CSS elements smoothly and makes sure every interactive function works properly.</p>
+        <p><strong>Output:</strong> Added JavaScript functions that allow users to click and show member details.</p>
+        <p><strong>My Opinion:</strong> Reiden is smart and technical. His coding accuracy gives the team’s webpage its functional strength.</p>
+      </div>
+    </div>
+
+    <!-- Member 3 -->
+    <div class="member" onclick="toggleSolo('samson')">
+      <img src="C:\Users\tpcmo\OneDrive\Pictures\565388518_1982939272277840_8950066790474844977_n.jpg" alt="Alexander Raven R. Samson" class="profile-img">
+      <h3>Samson, Alexander Raven R. <span class="role">(Member)</span></h3>
+      <div id="samson" class="details">
+        <p><strong>Explanation:</strong> Alexander assists in content writing and ensures the information presented is well-organized.</p>
+        <p><strong>Details:</strong> He edits paragraphs, revises wording, and improves the overall readability of the webpage.</p>
+        <p><strong>Output:</strong> Wrote and refined descriptive text for the group and member introductions.</p>
+        <p><strong>My Opinion:</strong> Alexander’s attention to detail makes the group’s work professional and polished. He’s an essential communicator in the team.</p>
+      </div>
+    </div>
+
+    <!-- Member 4 -->
+    <div class="member" onclick="toggleSolo('ballesca')">
+      <img src="C:\Users\tpcmo\OneDrive\Pictures\557972777_2004487550316160_5169392508044121153_n.jpg" alt="Mark Angelo M. Ballesca" class="profile-img">
+      <h3>Ballesca, Mark Angelo M. <span class="role">(Member)</span></h3>
+      <div id="ballesca" class="details">
+        <p><strong>Explanation:</strong> Mark focuses on idea development and creative planning.</p>
+        <p><strong>Details:</strong> He collaborates on layout concepts and helps finalize color and content arrangements.</p>
+        <p><strong>Output:</strong> Suggested interactive visual ideas and tested color combinations for readability and appeal.</p>
+        <p><strong>My Opinion:</strong> Mark is creative and reliable — always full of ideas and solutions that make the project look exciting and dynamic.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>Created by <strong>Phoenix Coder – Group 5</strong> | Visit our leader’s portfolio: 
+      <a href="https://example.com" target="_blank">Kim Khenette M. Sorio</a>
+    </p>
+  </footer>
+
+  <script>
+    function toggleSolo(id) {
+      // Hide all details first
+      const allDetails = document.querySelectorAll('.details');
+      allDetails.forEach(detail => {
+        if (detail.id !== id) {
+          detail.style.display = "none";
+        }
+      });
+
+      // Toggle the clicked one
+      const selected = document.getElementById(id);
+      if (selected.style.display === "block") {
+        selected.style.display = "none";
+      } else {
+        selected.style.display = "block";
+      }
+    }
+  </script>
+</body>
+</html>
